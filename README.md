@@ -100,3 +100,11 @@ The viewer will open in your default web browser and provides the following feat
 - Focus on high-value transactions typical of yacht brokerage
 
 This dataset provides realistic examples of customer service interactions in the luxury marine industry, useful for training, analysis, or demonstration purposes.
+
+
+
+## commands
+
+find *.json | xargs -I{} sh -c "cat {}; echo ," > 24.out
+
+python3 -m streamlit run vcon_viewer.py --server.port 3000 --server.address 0.0.0.0
